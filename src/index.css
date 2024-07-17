@@ -13,6 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -31,17 +38,22 @@ body {
   justify-content: center;
   min-width: 100vw;
   min-height: 100vh;
+  background: url('https://media.blogto.com/articles/2017416-osgoode-lead.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70') no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  border-bottom: 1dvh ridge #e9a929;
+  filter: drop-shadow(0 .5dvh 1dvh #3c3c3c);
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid gray;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -49,10 +61,13 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 2dvh;
 }
 
 button:hover {
   border-color: #646cff;
+  outline: 4px solid #646cff;
+
 }
 
 button:focus,
@@ -66,13 +81,21 @@ form {
   width: 90%;
 }
 
+label::first-letter {
+ text-transform: capitalize; 
+}
+
 input {
   padding: 5px;
 }
 
+input:focus {
+  filter: invert(100%);
+}
+
 .bookshelfDiv {
   padding: 10px;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,21 +103,33 @@ input {
 }
 
 .formDiv {
-  width: 60%;
+  width: 50dvh;
   border: 1px solid white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background: #000a;
+}
+
+h3 {
+  text-shadow: 0 0 .1dvh #fff;
 }
 
 .bookCardsDiv {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   margin-top: 20px;
+  border: 10px ridge burlywood;
+  background: #deb88787;
+  padding-top: 3.2dvh;
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding-left: 0;
 }
 
 .bookCard {
@@ -103,11 +138,19 @@ input {
   justify-content: center;
   flex-direction: column;
   border: 1px solid white;
+  border-left: 10px ridge #AA4A14;
+  border-bottom: none;
+  border-radius: 1dvh;
   padding: 5px;
   width: 40%;
-  margin: 15px 10px;
-  background-color: rgb(155, 155, 155);
+  background: url('https://images.unsplash.com/photo-1716295177956-420a647c83ac?q=80&w=1584&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
   color: black;
+  margin: 1dvh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  scale: .8;
+  width: 20dvh;
+  aspect-ratio: .65;
 }
 
 @media (prefers-color-scheme: light) {
