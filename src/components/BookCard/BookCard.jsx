@@ -1,8 +1,8 @@
 const BookCard = ({ book }) => {
     return (
         <li className='bookCard'>
-            <p>Title: {book.title}</p>
-            <p>Author: {book.author}</p>
+            <p><span>Title: </span>{book.title}</p>
+            <p><span>Author: </span>{book.author}</p>
         </li>
     );
 }

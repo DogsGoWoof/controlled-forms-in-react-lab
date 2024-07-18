@@ -148,9 +148,24 @@ ul {
   color: black;
   margin: 1dvh;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  scale: .8;
+  /* scale: .8; */
   width: 20dvh;
   aspect-ratio: .65;
+}
+
+span {
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+p {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2dvh 1dvw;
+  text-shadow: 0 0 1dvh white;
 }
 
 @media (prefers-color-scheme: light) {
